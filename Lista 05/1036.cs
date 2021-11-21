@@ -2,7 +2,7 @@ using System;
 
 class MainClass
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         double a, b, c, rd, r1, r2;
         string[] num;
