@@ -1,8 +1,8 @@
 using System;
 
-class MainClass {
-
-    public static void Main(string[] args)
+class MainClass 
+{
+    public static void Main(string[] args) 
     {
         double a, b, result;
         double pa = 3.5;
@@ -15,5 +15,4 @@ class MainClass {
 
         Console.WriteLine($"MEDIA = {result:0.00000}");
     }
-
 }

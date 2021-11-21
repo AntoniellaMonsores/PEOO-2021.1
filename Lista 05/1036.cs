@@ -1,8 +1,8 @@
 using System;
 
-class MainClass
+class MainClass 
 {
-    public static void Main(string[] args)
+    public static void Main(string[] args) 
     {
         double a, b, c, rd, r1, r2;
         string[] num;

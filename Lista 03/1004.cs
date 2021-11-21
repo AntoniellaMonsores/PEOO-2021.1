@@ -2,8 +2,8 @@ using System;
 
 class MainClass {
 
-    public static void Main(string[] args)
-    {
+    public static void Main(string[] args) {
+
         int n1, n2;
         int result;
 
@@ -13,5 +13,7 @@ class MainClass {
         result = n1 * n2;
 
         Console.WriteLine($"PROD = {result}");
+        
     }
+    
 }
