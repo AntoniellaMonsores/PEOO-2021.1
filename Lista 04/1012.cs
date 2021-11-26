@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+
+    public static void Main(string[] args) {
+
         // Valores de entrada
         string[] valores;
         double a, b, c;
@@ -32,5 +32,7 @@ class MainClass
         Console.WriteLine($"TRAPEZIO: {tra:0.000}");
         Console.WriteLine($"QUADRADO: {qua:0.000}");
         Console.WriteLine($"RETANGULO: {ret:0.000}");
+
     }
+    
 }

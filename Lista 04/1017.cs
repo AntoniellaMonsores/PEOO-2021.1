@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+
+    public static void Main(string[] args) {
+
         int time;
         int speed;
         float liters;
@@ -15,5 +15,7 @@ class MainClass
         liters = liters / 12;
 
         Console.WriteLine($"{liters:0.000}");
+        
     }
+
 }
