@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+
+    public static void Main(string[] args) {
+      
         double a, b, result;
         double pa = 3.5;
         double pb = 7.5;
@@ -14,5 +14,7 @@ class MainClass
         result = (a * pa + b * pb) / (pa + pb);
 
         Console.WriteLine($"MEDIA = {result:0.00000}");
+        
     }
+
 }
