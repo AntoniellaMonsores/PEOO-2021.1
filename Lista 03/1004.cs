@@ -13,7 +13,7 @@ class MainClass {
         result = n1 * n2;
 
         Console.WriteLine($"PROD = {result}");
-        
-    }
-    
+
+    } 
+
 }
