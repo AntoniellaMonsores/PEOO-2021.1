@@ -1,7 +1,7 @@
 using System;
 
 class MainClass {
-
+  
     public static void Main(string[] args) {
 
         int time;
@@ -15,7 +15,7 @@ class MainClass {
         liters = liters / 12;
 
         Console.WriteLine($"{liters:0.000}");
-        
+
     }
 
 }
