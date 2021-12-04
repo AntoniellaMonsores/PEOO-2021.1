@@ -5,7 +5,7 @@ class MainClass {
   public static string Iniciais(string[] nome) {
 
     string iniciais = "";
-
+    
     for (int i = 0; i < nome.Length; i++)
     {
       iniciais += nome[i][0] + " ";
