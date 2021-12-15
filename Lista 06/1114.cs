@@ -10,13 +10,13 @@ class MainClass {
     do {
       typed = Console.ReadLine();
 
-      if (password == typed)
-        Console.WriteLIne("Senha Invalida");
+      if (password != typed)
+        Console.WriteLine("Senha Invalida");
       else
-        Console.WriteLIne("Acesso Permitido");
+        Console.WriteLine("Acesso Permitido");
     }
 
-    while (typed != 2002);
+    while (typed != "2002");
   }
 
 }
