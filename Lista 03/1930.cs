@@ -1,8 +1,9 @@
 using System;
 
 class MainClass {
-    public static void Main(string[] args)
-    {
+    
+    public static void Main(string[] args) {
+        
         string[] t;
         int t1, t2;
         int t3, t4;
@@ -18,5 +19,7 @@ class MainClass {
 
         devices = (t1 + t2 + t3 + t4) - 3;
         Console.WriteLine(devices);
+        
     }
+    
 }
