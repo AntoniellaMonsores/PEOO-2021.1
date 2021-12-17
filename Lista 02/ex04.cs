@@ -1,7 +1,7 @@
 using System;
 
-class MainClass
-{
+class MainClass {
+    
     public static void Main(string[] args)
     {
         double b, a;
@@ -19,4 +19,5 @@ class MainClass
 
         Console.WriteLine($"\nÁrea = {area:0.00} - Perímetro = {peri:0.00} - Diagonal = {diag:0.00}");
     }
+    
 }
