@@ -1,8 +1,9 @@
 using System;
 
 class MainClass {
-    public static void Main(string[] args)
-    {
+    
+    public static void Main(string[] args) {
+        
         string[] line1;
         string[] line2;
         double x1, y1;
@@ -22,5 +23,7 @@ class MainClass {
         distance = Math.Sqrt(distance);
 
         Console.WriteLine($"{distance:0.0000}");
+        
     }
+    
 }
