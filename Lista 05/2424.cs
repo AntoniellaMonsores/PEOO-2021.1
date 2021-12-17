@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+    
+    public static void Main(string[] args) {
+        
         string[] c;
         int x, y;
         
@@ -15,6 +15,8 @@ class MainClass
         if ((x >= 0 && x <= 432) && (y >= 0 && y <= 468))
             Console.WriteLine("dentro");
         else
-            Console.WriteLine("fora");    
+            Console.WriteLine("fora"); 
+        
     }
+    
 }
