@@ -1,10 +1,9 @@
 using System;
 
-class MainClass
-{
-
-    public static void Main(string[] args)
-    {
+class MainClass {
+    
+    public static void Main(string[] args) {
+        
         string[] input;
         int c, n, t;
 
@@ -15,5 +14,7 @@ class MainClass
         t = c % n;
 
         Console.WriteLine(t);
+        
     }
+   
 }
