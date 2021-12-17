@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+    
+    public static void Main(string[] args) {
+        
         double a, b, c, rd, r1, r2;
         string[] num;
 
@@ -26,5 +26,7 @@ class MainClass
             Console.WriteLine($"R1 = {r1:0.00000}");
             Console.WriteLine($"R2 = {r2:0.00000}");
         }
+        
     }
+
 }
