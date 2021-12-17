@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+    
+    public static void Main(string[] args) {
+        
         int ddd;
 
         ddd = int.Parse(Console.ReadLine());
@@ -34,5 +34,7 @@ class MainClass
         
         else
             Console.WriteLine("DDD nao cadastrado");
+
     }
+
 }
