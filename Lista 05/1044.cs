@@ -1,9 +1,9 @@
 using System;
 
-class MainClass 
-{
-    public static void Main(string[] args) 
-    {
+class MainClass {
+    
+    public static void Main(string[] args) {
+        
         string[] val;
         int a, b;
 
@@ -16,5 +16,7 @@ class MainClass
             Console.WriteLine("Sao Multiplos");
         else
             Console.WriteLine("Nao sao Multiplos");
+        
     }
+    
 }
