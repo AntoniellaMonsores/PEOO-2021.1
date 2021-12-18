@@ -18,7 +18,7 @@ class Circulo {
 class MainClass {
 
     public static void Main() {
-
+        
         Circulo x = new Circulo();
         x.raio = 2;
         x.pi = 3.14159;
@@ -27,5 +27,5 @@ class MainClass {
         Console.WriteLine($"Circunferência do círculo: {x.CalcCircunferencia():0.00}");
         
     }
-
+    
 }
