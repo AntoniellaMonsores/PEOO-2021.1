@@ -21,7 +21,7 @@ class Viagem {
         x.h = 2;
         x.m = 30;
 
-        Console.WriteLine($"Velocidade: {x.VelMedia} km/h");
+        Console.WriteLine($"Velocidade: {x.VelMedia()} km/h");
     }
     
 }
