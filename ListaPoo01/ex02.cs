@@ -3,7 +3,10 @@ using System;
 class Disciplina {
     
     public string disciplina;
-    public int n1, n2, n3, n4;
+    public int n1;
+    public int n2;
+    public int n3;
+    public int n4;
     public int final;
 
     public int MediaParcial() {
