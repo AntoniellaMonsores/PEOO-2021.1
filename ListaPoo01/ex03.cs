@@ -14,7 +14,7 @@ class Viagem {
  
  class MainClass {
  
-    public static void {
+    public static void Main() {
     
         Viagem x = new Viagem();
         x.d = 200;
