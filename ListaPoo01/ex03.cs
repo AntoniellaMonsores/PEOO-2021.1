@@ -3,10 +3,10 @@ using System;
 class Viagem {
 
     public int d; // distância
-    public int h; // horas
-    public int m; // minutos
+    public double h; // horas
+    public double m; // minutos
 
-    public int VelMedia() {
+    public double VelMedia() {
         return d / h + (m / 60);
     }
     
