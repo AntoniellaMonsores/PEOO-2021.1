@@ -10,7 +10,7 @@ class Viagem {
         return d / (h + (m / 60));
     }
     
- }
+}
  
  class MainClass {
  
