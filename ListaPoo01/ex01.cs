@@ -12,6 +12,7 @@ class Circulo {
     public double CalcCircunferencia() {
         return 2 * pi * raio;
     }
+
 }
 
 class MainClass {
@@ -24,6 +25,7 @@ class MainClass {
 
         Console.WriteLine($"Área do círculo: {x.CalcArea():0.00}");
         Console.WriteLine($"Circunferência do círculo: {x.CalcCircunferencia():0.00}");
+        
     }
 
 }
