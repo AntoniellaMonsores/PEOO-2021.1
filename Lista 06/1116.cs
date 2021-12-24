@@ -7,7 +7,7 @@ class Program {
         int n;
         double x;
         double y;
-        string values;
+        string[] values;
 
         n = int.Parse(Console.ReadLine());
         
