@@ -9,6 +9,8 @@ class Program {
         int b = 1;
         int c;
 
+        n = int.Parse(Console.ReadLine());
+
         for (int i = 0; i < n; i++)
         {
             if (i == 0)
