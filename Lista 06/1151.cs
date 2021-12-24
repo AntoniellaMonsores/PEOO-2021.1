@@ -24,7 +24,7 @@ class Program {
                 a = b;
                 b = c;
 
-                Console.WriteLine(c);
+                Console.Write(c);
             }
             
         }
