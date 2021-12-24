@@ -14,19 +14,22 @@ class Program {
         for (int i = 0; i < n; i++)
         {
             if (i == 0)
-                Console.Write(a);
+                Console.Write($"{a} ");
 
             else if (i == 1)
-                Console.Write(b);
+                Console.Write($"{b} ");
 
-            else {
+            else 
+            {
                 c = a + b;
                 a = b;
                 b = c;
 
-                Console.Write(c);
+                if (i < n - 1)
+                    Console.Write($"{c} ");
+                else
+                    Console.Write($"{c}");
             }
-            
         }
 
     }
