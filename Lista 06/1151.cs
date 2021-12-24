@@ -28,7 +28,7 @@ class Program {
                 if (i < n - 1)
                     Console.Write($"{c} ");
                 else
-                    Console.Write($"{c}");
+                    Console.WriteLine($"{c}");
             }
         }
 
