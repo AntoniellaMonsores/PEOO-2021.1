@@ -1,17 +1,5 @@
 using System;
 
-class Viagem {
-
-    public double d; // distância
-    public double h; // horas
-    public double m; // minutos
-
-    public double VelMedia() {
-        return d / (h + (m / 60));
-    }
-    
-}
- 
 class MainClass {
  
     public static void Main(string[] args) {
@@ -22,6 +10,18 @@ class MainClass {
         x.m = 10;
 
         Console.WriteLine($"{x.VelMedia():0.00} km/h");
+    }
+    
+}
+
+class Viagem {
+
+    public double d; // distância
+    public double h; // horas
+    public double m; // minutos
+
+    public double VelMedia() {
+        return d / (h + (m / 60));
     }
     
 }
