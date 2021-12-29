@@ -1,27 +1,5 @@
 using System;
 
-class Disciplina {
-    
-    public string disciplina;
-    public int n1;
-    public int n2;
-    public int n3;
-    public int n4;
-    public int final;
-
-    public int MediaParcial() {
-        int peso = 2 * 2 + 3 * 2;
-        int soma = n1 * 2 + n2 * 2 + n3 * 3 + n4 * 3;
-        return soma / peso;
-    }
-
-    public int MediaFinal() {
-        int peso = 2 * 2 + 3 * 2;
-        int soma = n1 * 2 + n2 * 2 + n3 * 3 + n4 * 3;
-        return ((soma / peso) + final) / 2;
-    }
-}
-
 class MainClass {
 
     public static void Main(string[] args) {
@@ -53,4 +31,26 @@ class MainClass {
         
     }
 
+}
+
+class Disciplina {
+    
+    public string disciplina;
+    public int n1;
+    public int n2;
+    public int n3;
+    public int n4;
+    public int final;
+
+    public int MediaParcial() {
+        int peso = 2 * 2 + 3 * 2;
+        int soma = n1 * 2 + n2 * 2 + n3 * 3 + n4 * 3;
+        return soma / peso;
+    }
+
+    public int MediaFinal() {
+        int peso = 2 * 2 + 3 * 2;
+        int soma = n1 * 2 + n2 * 2 + n3 * 3 + n4 * 3;
+        return ((soma / peso) + final) / 2;
+    }
 }
