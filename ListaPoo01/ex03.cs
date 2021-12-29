@@ -12,9 +12,9 @@ class Viagem {
     
 }
  
- class MainClass {
+class MainClass {
  
-    public static void Main() {
+    public static void Main(string[] args) {
     
         Viagem x = new Viagem();
         x.d = 200;
