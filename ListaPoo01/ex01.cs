@@ -17,7 +17,7 @@ class Circulo {
 
 class MainClass {
 
-    public static void Main() {
+    public static void Main(string[] args) {
         
         Circulo x = new Circulo();
         x.raio = 2;
