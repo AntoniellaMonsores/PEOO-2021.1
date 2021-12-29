@@ -1,20 +1,5 @@
 using System;
 
-class Circulo {
-
-    public double raio;
-    public double pi;
-
-    public double CalcArea() {
-        return (pi * pi) * raio;
-    }
-
-    public double CalcCircunferencia() {
-        return 2 * pi * raio;
-    }
-
-}
-
 class MainClass {
 
     public static void Main(string[] args) {
@@ -28,4 +13,19 @@ class MainClass {
         
     }
     
+}
+
+class Circulo {
+
+    public double raio;
+    public double pi;
+
+    public double CalcArea() {
+        return (pi * pi) * raio;
+    }
+
+    public double CalcCircunferencia() {
+        return 2 * pi * raio;
+    }
+
 }
