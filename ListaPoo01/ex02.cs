@@ -24,7 +24,7 @@ class Disciplina {
 
 class MainClass {
 
-    public static void Main() {
+    public static void Main(string[] args) {
 
         Disciplina x = new Disciplina();
 
