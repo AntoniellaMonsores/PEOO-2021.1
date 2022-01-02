@@ -25,6 +25,7 @@ class Cinema {
     public string d;
     public int h;
     
+    // base values
     int op1 = 16;
     int op2 = 8;
     int op3 = 20;
