@@ -27,5 +27,4 @@ class MainClass
         Console.WriteLine($"Menor valor: {min}");
         Console.WriteLine($"Posicao: {ind}");
     }
-    
 }
