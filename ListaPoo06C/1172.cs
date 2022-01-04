@@ -20,9 +20,7 @@ class MainClass {
         }
 
         for (int i = 0; i < x.Length; i++)
-        {
             Console.WriteLine($"X[{i}] = {x[i]}");
-        }
 
     }
 
