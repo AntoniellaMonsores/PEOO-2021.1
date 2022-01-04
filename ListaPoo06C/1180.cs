@@ -6,22 +6,26 @@ class MainClass
     {
         int n;
         int min;
-        int[] array;
-        string[] e;
+        int ind;
+        string[] a;
 
         n = int.Parse(Console.ReadLine());
-        e = Console.ReadLine().Split();
+        a = Console.ReadLine().Split();
 
-        array = new int[n];
-        
-        for (int i = 0; i < n; i++)
+        min = Int32.Parse(a[0]);
+        ind = 0;
+
+        for (int i = 1; i < n; i++)
         {
-            array[i] = Int32.Parse(e[i]);
+            if (min > Int32.Parse(a[i]))
+            {
+                min = Int32.Parse(a[i]);
+                ind = i;
+            }
         }
 
-        min = array.Min();
-
         Console.WriteLine($"Menor valor: {min}");
-        Console.WriteLine($"{array.IndexOf(min)}");
+        Console.WriteLine($"Posicao: {ind}");
     }
+    
 }
