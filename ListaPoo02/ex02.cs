@@ -39,8 +39,7 @@ class Disciplina
     int p1 = 2; // peso notas 1° semestre
     int p2 = 3; // peso notas 2° semestre
     
-    public void SetNome(string s)
-    {
+    public void SetNome(string s) {
         if (s != "") nome = s;
     }
   
