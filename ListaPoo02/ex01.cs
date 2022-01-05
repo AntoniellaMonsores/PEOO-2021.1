@@ -24,7 +24,6 @@ class Circulo {
 
     public void SetRaio(double v) {
         // teste com o valor do raio
-        // os cálculos apenas serão possíveis com raio maior que zero
         if (v > 0) raio = v;
     }
 
