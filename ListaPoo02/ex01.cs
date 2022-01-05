@@ -6,10 +6,13 @@ class Program {
     
         Circulo x = new Circulo();
         
-        x.SetRaio(5);
+        x.SetRaio(2);
         
-        Console.WriteLine($"Área do círculo: {x.CalcArea():0.00}");
-        Console.WriteLine($"Circunferência do círculo: {x.CalcCircunferencia():0.00}");
+        double area = x.CalcArea();
+        double circ = x.CalcCircunferencia();
+
+        Console.WriteLine($"Área do círculo: {area:0.00}");
+        Console.WriteLine($"Circunferência do círculo: {circ:0.00}");
     }
  
 }
@@ -17,7 +20,7 @@ class Program {
 class Circulo {
 
     private double raio;
-    private double pi;
+    double pi = 3.14159;
 
     public void SetRaio(double v) {
         if (v >= 1) raio = v;
