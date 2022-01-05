@@ -9,8 +9,7 @@ class MainClass {
         Console.WriteLine("Informações da Sessão");
 
         Console.Write("Dia: ");
-        // for cases as "Segunda" or "segunda-feira"
-        x.d = Console.ReadLine().ToLower().Split("-")[0];
+        x.d = int.Parse(Console.ReadLine());
 
         Console.Write("Horário: ");
         x.h = int.Parse(Console.ReadLine());
@@ -22,7 +21,7 @@ class MainClass {
 
 class Cinema {
 
-    public string d;
+    public int d;
     public int h;
     
     // base values
@@ -34,9 +33,9 @@ class Cinema {
 
         if (h != 0 && h < 17)
         {
-            if (d == "segunda" || d == "terça" || d == "quinta")
+            if (d == 2 || d == 3 || d == 5)
                 return op1;
-            else if (d == "quarta")
+            else if (d == 4)
                 return op2;
             else
                 return op3;
@@ -44,9 +43,9 @@ class Cinema {
 
         else
         {
-            if (d == "segunda" || d == "terça" || d == "quinta")
+            if (d == 2 || d == 3 || d == 5)
                 return op1 + (50 / 100.0) * op1;
-            else if (d == "quarta")
+            else if (d == 4)
                 return op2 + (50 / 100.0) * op2;
             else
                 return op3 + (50 / 100.0) * op3;
