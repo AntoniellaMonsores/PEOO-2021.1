@@ -8,11 +8,10 @@ class Program {
         
         x.SetRaio(2); // valor do raio
         
-        double area = x.CalcArea();
-        double circ = x.CalcCircunferencia();
+        double a = x.CalcArea();
+        double c = x.CalcCircunferencia();
         
-        Console.WriteLine($"Área do círculo: {area:0.00}");
-        Console.WriteLine($"Circunferência do círculo: {circ:0.00}");
+        Console.WriteLine($"Área: {a:0.00} - Circunferência: {c:0.00}");
     }
  
 }
