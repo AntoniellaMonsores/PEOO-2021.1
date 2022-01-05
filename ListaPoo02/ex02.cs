@@ -25,7 +25,6 @@ class Program
             
         else
             Console.WriteLine($"Status: Aprovado");
-         
     }
 }
 
