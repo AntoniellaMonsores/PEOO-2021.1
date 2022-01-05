@@ -2,42 +2,31 @@ using System;
 
 class Program 
 {
+    
     public static void Main(string[] args)
     {
-        Disciplina x = new Disciplina;
+        Disciplina x = new Disciplina();
+
+        x.SetNome("Manoela Machado");
+        x.SetNota1(60);
+        x.SetNota2(45);
+        x.SetNota3(55);
+        x.SetNota4(60);
+        x.SetNotaFinal(65);
+
+        double mediaParcial = x.CalcMediaParcial();  
+        double mediaFinal = x.CalcMediaFinal();
         
-        x.SetNome("Mia");
-        x.SetNota1(85);
-        x.SetNota2(90);
-        x.SetNota3(81);
-        x.SetNota4(82);
+        Console.WriteLine(x.GetNome());
+        Console.WriteLine($"Media Parcial: {mediaParcial}");
+        Console.WriteLine($"Media Final: {mediaFinal}");
         
-        double mediaParcial = x.CalcMediaParcial();
-        
-        if (MediaParcial < 60)
-        {
-            x.SetNotaFinal(60);
+        if (mediaFinal < 60) 
+            Console.WriteLine($"Status: Reprovado");
             
-            double MediaFinal = x.CalcMediaFinal();
-            
-            if (MediaFinal < 60) 
-            {
-                Console.WriteLine($"{Media Parcial: {mediaParcial} - Media Final: {mediaFinal}");
-                Console.WriteLine($"Status: Reprovado");
-            }
-            
-            else
-            {
-                Console.WriteLine($"{Media Parcial: {mediaParcial} - Media Final: {mediaFinal}");
-                Console.WriteLine($"Status: Aprovado");
-            }
-        }
-     
-        else {
-            Console.WriteLine($"{Media Parcial: {mediaParcial}");
+        else
             Console.WriteLine($"Status: Aprovado");
-        }
-        
+         
     }
 }
 
@@ -102,10 +91,10 @@ class Disciplina
     }
     
     public double CalcMediaParcial() {
-        return (nota1 + nota2 + nota3 + nota4) / (nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2);
+        return (nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2) / (p1 * 2.0 + p2 * 2.0);
     }
     
     public double CalcMediaFinal() {
-        return (notaFinal + (nota1 + nota2 + nota3 + nota4) / (nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2)) / 2
+        return (notaFinal + ((nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2) / (p1 * 2.0 + p2 * 2.0))) / 2;
     }
 }
