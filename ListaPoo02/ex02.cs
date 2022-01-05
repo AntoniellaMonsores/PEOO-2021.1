@@ -4,6 +4,39 @@ class Program
 {
     public static void Main(string[] args)
     {
+        Disciplina x = new Disciplina;
+        
+        x.SetNome("Mia");
+        x.SetNota1(85);
+        x.SetNota2(90);
+        x.SetNota3(81);
+        x.SetNota4(82);
+        
+        double mediaParcial = x.CalcMediaParcial();
+        
+        if (MediaParcial < 60)
+        {
+            x.SetNotaFinal(60);
+            
+            double MediaFinal = x.CalcMediaFinal();
+            
+            if (MediaFinal < 60) 
+            {
+                Console.WriteLine($"{Media Parcial: {mediaParcial} - Media Final: {mediaFinal}");
+                Console.WriteLine($"Status: Reprovado");
+            }
+            
+            else
+            {
+                Console.WriteLine($"{Media Parcial: {mediaParcial} - Media Final: {mediaFinal}");
+                Console.WriteLine($"Status: Aprovado");
+            }
+        }
+     
+        else {
+            Console.WriteLine($"{Media Parcial: {mediaParcial}");
+            Console.WriteLine($"Status: Aprovado");
+        }
         
     }
 }
@@ -48,27 +81,31 @@ class Disciplina
         return nome;
     }
     
-    public int SetNota1() {
+    public int GetNota1() {
         return nota1;
     }
     
-    public int SetNota2() {
+    public int GetNota2() {
         return nota2;
     }
     
-    public int SetNota3() {
+    public int GetNota3() {
         return nota3;
     }
     
-    public int SetNota4() {
+    public int GetNota4() {
         return nota4;
     }
     
-    public int SetNotaFinal() {
+    public int GetNotaFinal() {
         return notaFinal;
     }
     
     public double CalcMediaParcial() {
-        return (nota1 + nota2 + nota3 + nota4) / nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2;
+        return (nota1 + nota2 + nota3 + nota4) / (nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2);
+    }
+    
+    public double CalcMediaFinal() {
+        return (notaFinal + (nota1 + nota2 + nota3 + nota4) / (nota1 * p1 + nota2 * p1 + nota3 * p2 + nota4 * p2)) / 2
     }
 }
