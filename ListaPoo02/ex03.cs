@@ -46,4 +46,5 @@ class Viagem {
     public double VelocidadeMedia() { 
         return distancia / tempo; 
     }
+    
 }
