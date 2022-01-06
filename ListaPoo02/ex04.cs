@@ -38,24 +38,34 @@ class Cinema {
 
     public double ValorEntrada() {
     
-        if (horario > 0 && horario < 17)
+        if (horario > 0 && horario < 17) 
         {
-            if (dia == 2 || dia == 3 || dia == 5) 
+            if (dia == 2 || dia == 3 || dia == 5) { // segunda, terça e quinta
                 return 16;
-            else if (dia == 4) 
+            }
+            
+            else if (dia == 4) { // quarta
                 return 8;
-            else if (dia == 6 || dia == 7) 
+            }
+            
+            else if (dia == 1 || dia == 6 || dia == 7) { // domingo, sexta e sábado
                 return 20;
+            }
         }
         
         else 
         {
-            if (dia == 2 || dia == 3 || dia == 5) 
+            if (dia == 2 || dia == 3 || dia == 5) { // segunda, terça e quinta
                 return 16 + (50 / 100) * 16;
-            else if (dia == 4) 
+            }
+            
+            else if (dia == 4) { // quarta
                 return 8 + (50 / 100) * 20;
-            else if (dia == 6 || dia == 7) 
+            }
+    
+            else if (dia == 1 || dia == 6 || dia == 7) { // domingo, sexta e sábado
                 return 20 + (50 / 100) * 20;
+            }
         }
         
         return 0;
