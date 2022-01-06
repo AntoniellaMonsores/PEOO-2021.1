@@ -12,6 +12,7 @@ class Program {
         Console.WriteLine($"Dia: {a.GetDia()}");
         Console.WriteLine($"Horário: {(int)a.GetHora()} h e {a.GetHora() % 1 * 60} min");
         Console.WriteLine($"Entrada: R$ {a.ValorEntrada():0.00}");
+    
     }
 
 }
@@ -37,8 +38,8 @@ class Cinema {
         return horario; 
     }
 
-    public double ValorEntrada() {
-    
+    public double ValorEntrada() 
+    {
         if (horario > 0 && horario < 17) 
         {
             if (dia == 2 || dia == 3 || dia == 5) { // segunda, terça e quinta
