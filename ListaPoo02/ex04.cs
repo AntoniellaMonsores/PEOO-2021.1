@@ -2,9 +2,14 @@ using System;
 
 class Program {
 
-    public static void Main(string[] args {
+    public static void Main(string[] args) {
 
-        
+        Cinema a = new Cinema();
+
+        a.SetDia(7);
+        a.SetHora(12.5);
+
+        Console.WriteLine(a.ValorEntrada());
 
     }
 
@@ -16,10 +21,10 @@ class Cinema {
     private double horario;
     
     public void SetDia(int d) {
-        if (d > 0) dia = d;
+        if (d > 0 && d <= 7) dia = d;
     }
     
-    public void SetHora(int h) {
+    public void SetHora(double h) {
         if (h >= 0) horario = h;
     }
 
@@ -28,25 +33,32 @@ class Cinema {
     }
     
     public double GetHora() { 
-        return hora; 
+        return horario; 
     }
 
-    public int ValorEntrada() {
+    public double ValorEntrada() {
     
         if (horario > 0 && horario < 17)
         {
-            if (dia == 2 || dia == 3 || dia == 5) return 16;
-            else if (dia == 4) return 8;
-            else return 20;
+            if (dia == 2 || dia == 3 || dia == 5) 
+                return 16;
+            else if (dia == 4) 
+                return 8;
+            else if (dia == 6 || dia == 7) 
+                return 20;
         }
         
         else 
         {
-            if (dia == 2 || dia == 3 || dia == 5) return 16 + (50 / 100) * 16;
-            else if (dia == 4) return 8 + (50 / 100) * 20;
-            else return 20 + (50 / 100) * 20;
+            if (dia == 2 || dia == 3 || dia == 5) 
+                return 16 + (50 / 100) * 16;
+            else if (dia == 4) 
+                return 8 + (50 / 100) * 20;
+            else if (dia == 6 || dia == 7) 
+                return 20 + (50 / 100) * 20;
         }
         
+        return 0;
     }
 
 }
