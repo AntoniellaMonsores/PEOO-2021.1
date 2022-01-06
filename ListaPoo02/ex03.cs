@@ -4,20 +4,19 @@ class Program {
 
     public static void Main(string[] args) {
 
-        double d;
-        double t;
+        double d, t, v;
         Viagem x = new Viagem();
         
-        Console.Write("Distância Percorrida: ");
-        d = double.Parse(Console.ReadLine());
+        x.SetDistancia(100);
+        x.SetTempo(1.2);
         
-        Console.Write("Tempo Gasto: ");
-        t = double.Parse(Console.ReadLine());
-        
-        x.SetDistancia(d);
-        x.SetTempo(t);
-        
-        Console.WriteLine($"Velocidade Média: {x.VelocidadeMedia()} km/h");
+        d = x.GetDistancia();
+        t = x.GetTempo();
+        v = x.VelocidadeMedia();
+
+        Console.WriteLine($"Distância = {d} km");
+        Console.WriteLine($"Tempo Gasto = {(int)t} h e {t % 1 * 60} min");
+        Console.WriteLine($"Velocidade Média = {v:0.0} km/h");
 
     }
 
