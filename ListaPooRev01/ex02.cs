@@ -24,8 +24,8 @@ class Program {
             vetor[i] = p;
         }
 
-        int[] h = new int[n];
-        double[] a = new double[n];
+        int[] h = new int[n];       // habitantes
+        double[] a = new double[n]; // áreas geográficas
 
         for (int i = 0; i < n; i++) {
             h[i] = vetor[i].GetPopulacao();
