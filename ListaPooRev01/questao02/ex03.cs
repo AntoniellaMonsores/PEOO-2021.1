@@ -18,6 +18,7 @@ class Program {
             Console.WriteLine(p);
 
         Console.WriteLine($"\nVALOR TOTAL: R${x.Somar():0.00}");
+        
     }
 
 }
