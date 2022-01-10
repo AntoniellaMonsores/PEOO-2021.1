@@ -33,13 +33,8 @@ class Program {
         int ind1 = Pais.MaiorPopulacao(n, h);
         int ind2 = Pais.MaiorArea(n, a);
 
-        string n_max1 = vetor[ind1].GetNome();
-        string n_max2 = vetor[ind2].GetNome();
-        double a_max = vetor[ind2].GetArea();
-        int p_max = vetor[ind1].GetPopulacao();
-
-        Console.WriteLine($"Mais populoso: {n_max1} - {p_max} habitantes");
-        Console.WriteLine($"Maior área: {n_max2} - {a_max} km²");
+        Console.WriteLine($"Mais populoso: {vetor[ind1].GetNome()} - {vetor[ind1].GetPopulacao()} habitantes");
+        Console.WriteLine($"Maior área: {vetor[ind2].GetNome()} - {vetor[ind2].GetArea()} km²");
     }
 
 }
