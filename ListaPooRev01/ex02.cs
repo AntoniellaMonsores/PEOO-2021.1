@@ -35,6 +35,7 @@ class Program {
 
         Console.WriteLine($"Mais populoso: {vetor[ind1].GetNome()} - {vetor[ind1].GetPopulacao()} habitantes");
         Console.WriteLine($"Maior área: {vetor[ind2].GetNome()} - {vetor[ind2].GetArea()} km²");
+        
     }
 
 }
