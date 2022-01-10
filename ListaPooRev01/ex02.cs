@@ -1,13 +1,3 @@
-/* 
-Informe o número de países:
-Informe o nome do 1o país: 
-Informe a população do 1o país: 
-Informe a área geográfica do 1o país em km2: 
-Informe o nome do 2o país:
-Informe a população do 2o país: 
-Informe a área geográfica do 2o país em km2:
-*/
-
 using System;
 
 class Program {
@@ -31,7 +21,7 @@ class Program {
             Console.Write($"\nInforme a população do {i}° país: ");
             habs = Console.Read();
             
-            Console.Write($"\nInforme a área geográfica do {i}° país: ");
+            Console.Write($"\nInforme a área geográfica do {i}° país em km²: ");
             area = Console.Read();
             
             Pais p = new Pais(nome, habs, area);
