@@ -6,10 +6,10 @@ class Program {
 
         Apto x = new Apto();
         
-        Console.Write("Número de andares: ");
+        Console.Write("N° de andares: ");
         int and = int.Parse(Console.ReadLine());
-        
-        Console.Write("Números de apartamentos por andar: ");
+
+        Console.Write("N° de apartamentos por andar: ");
         int apt = int.Parse(Console.ReadLine());
 
         int[] vetor = new int[and * apt];
@@ -19,10 +19,10 @@ class Program {
         
         vetor = x.GetNumeros();
         
-        Console.WriteLine("Apartamentos:");
+        Console.WriteLine("\nNumeração dos apartamentos:");
         
-        foreach (a in vetor) {
-            Console.WriteLine(a);
+        foreach (int apto in vetor) {
+            Console.WriteLine(apto);
         }
     }
 
@@ -41,14 +41,16 @@ class Apto {
         if (i > 0) numAptosAndar = i;
     }
     
-    public int GetNumeros() 
+    public int[] GetNumeros() 
     {
         int[] aptos = new int[numAndares * numAptosAndar];
         
-        for (int i = 0; i < numAndares; i++) {
-            for (int j = 0; j < numAptosAndar; j++) {
-                aptos[i] = numAndares[i] * 100 + j;
-            }
+        int ind = 0;
+
+        for (int i = 1; i <= numAndares; i++) 
+        {
+            for (int j = 1; j <= numAptosAndar; j++) 
+                aptos[ind++] = i * 100 + j;
         }
      
         return aptos;
