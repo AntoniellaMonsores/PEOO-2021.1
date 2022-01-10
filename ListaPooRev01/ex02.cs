@@ -2,8 +2,8 @@ using System;
 
 class Program {
 
-    public static void Main(string[] args) 
-    {
+    public static void Main(string[] args) {
+        
         Console.Write("Informe o número de países: ");
         
         int n = int.Parse(Console.ReadLine());
@@ -35,6 +35,7 @@ class Program {
 
         Console.WriteLine($"Mais populoso: {vetor[ind1].GetNome()} - {vetor[ind1].GetPopulacao()} habitantes");
         Console.WriteLine($"Maior área: {vetor[ind2].GetNome()} - {vetor[ind2].GetArea()} km²");
+        
     }
 
 }
