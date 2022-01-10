@@ -1,28 +1,28 @@
 using System;
 
 class Program {
-    
+
     public static void Main(string[] args) {
         
         Console.Write("Informe o número de países: ");
         
-        int n = int.Parse(Console.Read());
+        int n = int.Parse(Console.ReadLine());
         Pais[] vetor = new Pais[n];
-     
-        for (int i = 0; i < n; i++)
+
+        for (int i = 0; i < vetor.Length; i++)
         {
             string nome;
             double area;
             int habs;
             
-            Console.Write($"\nInforme o nome do {i}° país: ");
-            nome = Console.Read();
+            Console.Write($"Informe o nome do {i+1}° país: ");
+            nome = Console.ReadLine();
             
-            Console.Write($"\nInforme a população do {i}° país: ");
-            habs = Console.Read();
+            Console.Write($"Informe a população do {i+1}° país: ");
+            habs = int.Parse(Console.ReadLine());
             
-            Console.Write($"\nInforme a área geográfica do {i}° país em km²: ");
-            area = Console.Read();
+            Console.Write($"Informe a área geográfica do {i+1}° país em km²: ");
+            area = double.Parse(Console.ReadLine());
             
             Pais p = new Pais(nome, habs, area);
             vetor[i] = p;
@@ -30,39 +30,57 @@ class Program {
 
         int[] h = new int[n];
         double[] a = new double[n];
-        
-        for (int i = 0; i < n; i++)
-        {
-            h[i] = vetor[i][1];
-            a[i[ = vetor[i][2];
+
+        int max_p = 0;
+        double max_a = 0;
+        int j = 0;
+        int k = 0;
+
+        for (int i = 0; i < n; i++) {
+            h[i] = vetor[i].GetPopulacao();
+            a[i] = vetor[i].GetArea();
+
+            if (max_p < h[i])
+            {
+                max_p = h[i];
+                j = i;
+            }
+
+            if (max_a < a[i])
+            {
+                max_a = a[i];
+                k = i;
+            }
         }
-        
-        int j = MaiorHabs(h);
-        int k = MaiorArea(a);
-                
-        Console.WriteLine($"Mais populoso: {vetor[j][0]} - vetor[j][1]");
-        Console.WriteLine($"Maior área: {vetor[k][0]} - vetor[k][2]");
+
+        Console.WriteLine($"Mais populoso: {vetor[j].GetNome()} - {vetor[j].GetPopulacao()}");
+        Console.WriteLine($"Maior área: {vetor[k].GetNome()} - {vetor[k].GetArea()}");
     }
 
 }
 
 class Pais {
 
-    private nome;
+    private string nome;
     private int populacao;
     private double area;
     
-    public void Pais(string n, int p, double a) {
+    public Pais(string n, int p, double a) {
         if (n.Length > 0) nome = n;
         if (p > 0) populacao = p;
         if (a > 0) area = a;
     }
-    
-    public int MaiorHabs(int[] h) {
-        return vetor.IndexOf(h.Max());
+
+    public string GetNome() {
+        return nome;
     }
 
-    public int MaiorArea(double[] a) {
-        return vetor.IndexOf(a.Max());
+    public int GetPopulacao() {
+        return populacao;
     }
+
+    public double GetArea() {
+        return area;
+    }
+    
 }
