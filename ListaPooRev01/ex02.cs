@@ -31,30 +31,14 @@ class Program {
         int[] h = new int[n];
         double[] a = new double[n];
 
-        int max_p = 0;
-        double max_a = 0;
-        int j = 0;
-        int k = 0;
+        int ind1 = vetor.MaiorPopulacao(n, h);
 
         for (int i = 0; i < n; i++) {
             h[i] = vetor[i].GetPopulacao();
             a[i] = vetor[i].GetArea();
-
-            if (max_p < h[i])
-            {
-                max_p = h[i];
-                j = i;
-            }
-
-            if (max_a < a[i])
-            {
-                max_a = a[i];
-                k = i;
-            }
         }
-
-        Console.WriteLine($"Mais populoso: {vetor[j].GetNome()} - {vetor[j].GetPopulacao()}");
-        Console.WriteLine($"Maior área: {vetor[k].GetNome()} - {vetor[k].GetArea()}");
+        
+        Console.WriteLine($"Mais populoso: {vetor[ind1].GetNome()} - {vetor[ind1].GetPopulacao()}");
     }
 
 }
@@ -81,6 +65,22 @@ class Pais {
 
     public double GetArea() {
         return area;
+    }
+    
+    public int MaiorPopulacao(int n, int[] h) {
+        int max = 0;
+        int ind = 0;
+        
+        for (int i = 0; i < n; i++) 
+        {
+            if (max < h[i])
+            {
+                max = h[i];
+                ind = i;
+            }
+        }
+        
+        return ind;
     }
     
 }
