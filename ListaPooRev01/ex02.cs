@@ -7,8 +7,8 @@ class Program {
         Console.Write("Informe o número de países: ");
         
         int n = int.Parse(Console.ReadLine());
+        
         Pais[] vetor = new Pais[n];
-
         int[] h = new int[n];
         double[] a = new double[n];
 
