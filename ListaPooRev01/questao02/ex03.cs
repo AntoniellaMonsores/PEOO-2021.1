@@ -1,5 +1,27 @@
 using System;
 
+class Program {
+
+    public static void Main(string[] args) {
+
+        Carrinho x = new Carrinho();
+
+        Produto a = new Produto("Bubble Tea", 2, 21.99);
+    
+        x.Inserir(a);
+
+        Produto[] prods = x.Listar();
+
+        Console.WriteLine("PRODUTOS:");
+
+        foreach (Produto p in prods)
+            Console.WriteLine(p);
+
+        Console.WriteLine($"\nVALOR TOTAL: R${x.Somar():0.00}");
+    }
+
+}
+
 class Carrinho {
 
     Produto[] prods = new Produto[50];   
@@ -11,7 +33,9 @@ class Carrinho {
     }
     
     public Produto[] Listar() {
-        return prods[0..ind];
+        Produto[] vetor = new Produto[ind];
+        Array.Copy(prods, vetor, ind);
+        return vetor;
     }
     
     public double Somar() 
@@ -19,9 +43,9 @@ class Carrinho {
         double soma = 0;
         double x;
         
-        for (int i = 0; i < auxiliar; i++)
+        for (int i = 0; i < ind; i++)
         {
-            x = prods[i].Getquantidade() * prods[i].Getpreco();
+            x = prods[i].GetQuantidade() * prods[i].GetPreco();
             soma = soma + x;
          }
          
@@ -51,7 +75,7 @@ class Produto {
     }
     
     public override string ToString() {
-        return $"Descrição: {descricao} - Quantidade: {qtd} - Preço: {preco}";
+        return $"Descrição - {descricao} | Qtd - {qtd} | Preço Un - R${preco:0.00}";
     }
     
 }
