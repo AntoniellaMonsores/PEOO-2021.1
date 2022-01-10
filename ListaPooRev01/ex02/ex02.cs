@@ -28,6 +28,7 @@ class Program {
 
 }
 
+
 class Apto {
 
     private int numAndares;
