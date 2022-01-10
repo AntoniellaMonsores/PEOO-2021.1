@@ -37,7 +37,7 @@ class Program {
 
         string n_max1 = vetor[ind1].GetNome();
         string n_max2 = vetor[ind2].GetNome();
-        double = a_max = vetor[ind2].GetArea();
+        double a_max = vetor[ind2].GetArea();
         int p_max = vetor[ind1].GetPopulacao();
 
         Console.WriteLine($"Mais populoso: {n_max1} - {p_max} habitantes");
