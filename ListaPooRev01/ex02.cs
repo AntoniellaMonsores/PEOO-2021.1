@@ -9,6 +9,9 @@ class Program {
         int n = int.Parse(Console.ReadLine());
         Pais[] vetor = new Pais[n];
 
+        int[] h = new int[n];
+        double[] a = new double[n];
+
         for (int i = 0; i < vetor.Length; i++)
         {
             Console.Write($"Informe o nome do {i+1}° país: ");
@@ -22,14 +25,9 @@ class Program {
             
             Pais p = new Pais(nome, habs, area);
             vetor[i] = p;
-        }
-
-        int[] h = new int[n];       // habitantes
-        double[] a = new double[n]; // áreas geográficas
-
-        for (int i = 0; i < n; i++) {
-            h[i] = vetor[i].GetPopulacao();
-            a[i] = vetor[i].GetArea();
+    
+            h[i] = p.GetPopulacao();
+            a[i] = p.GetArea();
         }
 
         int ind1 = Pais.MaiorPopulacao(n, h);
@@ -41,7 +39,7 @@ class Program {
         int p_max = vetor[ind1].GetPopulacao();
 
         Console.WriteLine($"Mais populoso: {n_max1} - {p_max} habitantes");
-        Console.WriteLine($"Maior área: {n_max2} - {a_max}" km²);
+        Console.WriteLine($"Maior área: {n_max2} - {a_max} km²");
     }
 
 }
