@@ -4,8 +4,7 @@ class Program
 {
     public static void Main()
     {
-        string d = "12/03/2004";
-        Data a = new Data(d);
+        Data a = new Data("12/03/2004");
         Console.WriteLine(a);
     }
 }
