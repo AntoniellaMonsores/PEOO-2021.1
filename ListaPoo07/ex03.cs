@@ -7,12 +7,12 @@ class Program
         Compromisso a = new Compromisso();
         a.Assunto = "a";
         a.Local = "d";
-        a.Data = "08/04/2022";
+        a.Data = DateTime.Parse("2022-2-7");
       
         Compromisso b = new Compromisso();
         b.Assunto = "b";
         b.Local = "c";
-        b.Data = "22/05/2022";
+        b.Data = DateTime.Parse("2022-2-6");
 
         Agenda newAgenda = new Agenda();
         newAgenda.Inserir(a);
@@ -59,6 +59,11 @@ class Agenda
         return aux;
     }
 
+    /*public Compromisso[] Pesquisar(int mes, int ano)
+    {
+
+    }*/
+
 }
 
 class Compromisso
@@ -67,10 +72,10 @@ class Compromisso
 
     public string Local { get; set; }
 
-    public string Data { get; set; }
+    public DateTime Data { get; set; }
 
     public override string ToString()
     {
-        return $"Assunto: {Assunto} - Local: {Local} - Data: {Data}";
+        return $"Assunto: {Assunto} - Local: {Local} - Data: {Data.Day:00}/{Data.Month:00}/{Data.Year}";
     }
 }
