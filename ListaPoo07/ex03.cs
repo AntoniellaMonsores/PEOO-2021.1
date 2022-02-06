@@ -14,15 +14,23 @@ class Program
         b.Local = "c";
         b.Data = DateTime.Parse("2022-2-6");
 
+        Compromisso c = new Compromisso();
+        c.Assunto = "c";
+        c.Local = "b";
+        c.Data = DateTime.Parse("2022-3-6");
+
         Agenda newAgenda = new Agenda();
+
         newAgenda.Inserir(a);
         newAgenda.Inserir(b);
-        newAgenda.Excluir(a);
-    
-        foreach (Compromisso c in newAgenda.Listar())
-            Console.WriteLine(c);
+        newAgenda.Inserir(c);
+        newAgenda.Excluir(b);
+
+        foreach (Compromisso comp in newAgenda.Listar())
+            Console.WriteLine(comp);
 
         Console.WriteLine($"Qtd de compromissos: {newAgenda.Qtd}");
+        Console.WriteLine(newAgenda.Pesquisar(2, 2022).Length);
     }
 }
 
@@ -59,10 +67,22 @@ class Agenda
         return aux;
     }
 
-    /*public Compromisso[] Pesquisar(int mes, int ano)
+    public Compromisso[] Pesquisar(int mes, int ano)
     {
+        Compromisso[] aux = new Compromisso[0];
+        int n = 0;
 
-    }*/
+        for (int i = 0; i < k; i++)
+        {
+            if (comps[i].Data.Month == mes && comps[i].Data.Year == ano)
+            {   
+                Array.Resize(ref aux, n+1); // Resize aux
+                aux[n++] = comps[i];
+            }
+        }
+
+        return aux;
+    }
 
 }
 
