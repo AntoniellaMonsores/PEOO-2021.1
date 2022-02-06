@@ -17,7 +17,7 @@ class Program
         Compromisso c = new Compromisso();
         c.Assunto = "c";
         c.Local = "b";
-        c.Data = DateTime.Parse("2022-3-6");
+        c.Data = DateTime.Parse("2022-3-10");
 
         Agenda newAgenda = new Agenda();
 
