@@ -24,7 +24,7 @@ class Program
         newAgenda.Inserir(a);
         newAgenda.Inserir(b);
         newAgenda.Inserir(c);
-        newAgenda.Excluir(b);
+        newAgenda.Excluir(a);
 
         foreach (Compromisso comp in newAgenda.Listar())
             Console.WriteLine(comp);
@@ -57,7 +57,7 @@ class Agenda
             comps[i] = comps[i + 1];
         }
         
-        Array.Resize(ref comps, k--); // Resize comps
+        k -= 1;
     }
 
     public Compromisso[] Listar()
