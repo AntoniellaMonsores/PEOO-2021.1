@@ -6,12 +6,12 @@ class Program
     {
         Compromisso a = new Compromisso();
         a.Assunto = "a";
-        a.Local = "b";
+        a.Local = "d";
         a.Data = "08/04/2022";
       
         Compromisso b = new Compromisso();
-        b.Assunto = "c";
-        b.Local = "d";
+        b.Assunto = "b";
+        b.Local = "c";
         b.Data = "22/05/2022";
 
         Agenda agenda01 = new Agenda();
