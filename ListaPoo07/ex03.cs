@@ -4,32 +4,25 @@ class Program
 {
     public static void Main()
     {
-        Compromisso x = new Compromisso();
-        x.Assunto = "a";
-        x.Local = "b";
-        x.Data = "08/04/2022";
+        Compromisso a = new Compromisso();
+        a.Assunto = "a";
+        a.Local = "b";
+        a.Data = "08/04/2022";
       
-        Compromisso y = new Compromisso();
-        y.Assunto = "c";
-        y.Local = "d";
-        y.Data = "22/05/2022";
+        Compromisso b = new Compromisso();
+        b.Assunto = "c";
+        b.Local = "d";
+        b.Data = "22/05/2022";
 
-        Agenda a = new Agenda();
-        a.Inserir(x);
-        a.Inserir(x);
-        a.Inserir(y);
-        a.Excluir(x);
+        Agenda agenda01 = new Agenda();
+        agenda01.Inserir(a);
+        agenda01.Inserir(b);
+        agenda01.Excluir(a);
     
-        foreach (Compromisso c in a.Listar())
+        foreach (Compromisso c in agenda01.Listar())
             Console.WriteLine(c);
 
-        Console.WriteLine($"Qtd de compromissos: {a.Qtd}");
-        /* Teste 01
-        Console.WriteLine(x.Assunto);
-        Console.WriteLine(x.Local);
-        Console.WriteLine(x.Data);
-        Console.WriteLine(x);
-        */
+        Console.WriteLine($"Qtd de compromissos: {agenda01.Qtd}");
     }
 }
 
