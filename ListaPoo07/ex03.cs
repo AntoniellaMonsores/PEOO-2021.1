@@ -14,15 +14,15 @@ class Program
         b.Local = "c";
         b.Data = "22/05/2022";
 
-        Agenda agenda01 = new Agenda();
-        agenda01.Inserir(a);
-        agenda01.Inserir(b);
-        agenda01.Excluir(a);
+        Agenda newAgenda = new Agenda();
+        newAgenda.Inserir(a);
+        newAgenda.Inserir(b);
+        newAgenda.Excluir(a);
     
-        foreach (Compromisso c in agenda01.Listar())
+        foreach (Compromisso c in newAgenda.Listar())
             Console.WriteLine(c);
 
-        Console.WriteLine($"Qtd de compromissos: {agenda01.Qtd}");
+        Console.WriteLine($"Qtd de compromissos: {newAgenda.Qtd}");
     }
 }
 
