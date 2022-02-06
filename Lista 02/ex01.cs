@@ -10,4 +10,3 @@ class MainClass
         Console.WriteLine($"\nBem vindo ao C#, {nome}");
     }
 }
-
