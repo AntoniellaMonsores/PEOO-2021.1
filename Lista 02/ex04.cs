@@ -4,7 +4,8 @@ class MainClass
 {
     public static void Main(string[] args)
     {
-        double b, a;
+        double b;
+        double a;
         double area;
         double peri;
         double diag;

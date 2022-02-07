@@ -7,6 +7,7 @@ class MainClass
         Console.WriteLine("Digite seu primeiro nome:");
         
         string nome = Console.ReadLine();
+        
         Console.WriteLine($"\nBem vindo ao C#, {nome}");
     }
 }
