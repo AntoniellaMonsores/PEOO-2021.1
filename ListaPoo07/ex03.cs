@@ -57,7 +57,7 @@ class Agenda
             comps[i] = comps[i + 1];
         }
         
-        k -= 1;
+        Array.Resize(ref comps, k--); // Resize comps
     }
 
     public Compromisso[] Listar()
