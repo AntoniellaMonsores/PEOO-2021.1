@@ -96,6 +96,6 @@ class Compromisso
 
     public override string ToString()
     {
-        return $"Assunto: {Assunto} - Local: {Local} - Data: {Data.Day:00}/{Data.Month:00}/{Data.Year}";
+        return $"Assunto: {Assunto} - Local: {Local} - Data: {Data:dd/MM/yyy}";
     }
 }
