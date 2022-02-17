@@ -3,7 +3,7 @@ using System.Collections;
 
 class MainClass {
 
-    public static void Main(string[] args)
+    public static void Main()
     {
         int n;
         int op;
