@@ -55,17 +55,22 @@ class Pais : IComparable<Pais> {
 
 class QuadroMedalhas {
 
-    List<Pais> paises = new List<Pais>();
+    Pais[] paises = new Pais[10];
+    int nPaises = 0;
 
     public void Inserir(Pais p)
     {
-        paises.Add(p);
+        paises[nPaises] = p;
+        nPaises++;
     }
 
-    public List<Pais> Listar()
+    public Pais[] Listar()
     {
-        paises.Sort();
-        return paises;
+        Pais[] aux = new Pais[nPaises];
+        
+        Array.Copy(paises, aux, nPaises);
+
+        return aux;
     }
 
 }
