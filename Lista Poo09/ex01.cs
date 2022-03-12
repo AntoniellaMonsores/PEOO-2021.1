@@ -21,6 +21,9 @@ class Program
 
         foreach (int i in colecao)
             Console.WriteLine(i);
+
+        Console.WriteLine();
+        Console.WriteLine($"Número de elementos: {colecao.Count}");
     }
 }
 
@@ -31,6 +34,7 @@ class Colecao<T> : IEnumerable where T : IComparable
     private T[] vetor = new T[50];
     private int n = 0;
 
+    public int Count { get { return n; } }
     public void Add(T obj)
     {
         if (n < vetor.Length) vetor[n] = obj;
